@@ -15,4 +15,8 @@ class JokeController extends Controller
         return response()->json(array_slice($jokes, 0, 3));
     }
 
+    public function index() {
+        return view('index');
+    }
+
 }

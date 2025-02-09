@@ -27,14 +27,17 @@ Vue.use(VueHighlightJs, {
     }
 });
 
-const routes = [
+import JokesComponent from "./components/JokesComponent.vue";
 
+const routes = [
+{ name: "JokesComponent", path: '/jokes', component: JokesComponent},
 ];
 
 const router = new VueRouter({ mode: 'history', routes });
 
 // Register main component
 Vue.component('app', require('./components/App.vue').default);
+
 
 // Create  Vue instance
 const app = new Vue({
