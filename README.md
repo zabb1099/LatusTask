@@ -19,6 +19,8 @@ Please follow these instructions to set up the project.
 
 `docker-compose up -d --build`
 
+Make sure all containers are up and running
+
 `docker-compose run --rm composer install`
 
 ### Step 3: 
@@ -41,6 +43,6 @@ Run the following to install JavaScript packages
  
 `docker compose run --rm npm install`
 
-Proceed to compile and execute your JavaScript file.
+Proceed to compile and execute the JavaScript file.
 
 `docker compose run --rm npm run dev`

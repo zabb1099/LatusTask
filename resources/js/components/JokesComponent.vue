@@ -27,7 +27,6 @@ export default {
             })
                 .then((res) => {
                     this.jokes = res.data;
-                    console.log(this.jokes);
                 })
                 .catch((err) => {
                     console.log(err);
