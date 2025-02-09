@@ -9,7 +9,10 @@ class JokeController extends Controller
 {
     public function getJokes() {
         $response = Http::get('https://official-joke-api.appspot.com/jokes/programming/ten/');
-        return $response->json();
+        $jokes = $response->json();
+        //Randomize array so it returns 3 different jokes on each request
+        shuffle($jokes);
+        return response()->json(array_slice($jokes, 0, 3));
     }
 
 }
