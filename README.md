@@ -71,3 +71,5 @@ Run the following to install JavaScript packages
 Proceed to compile and execute the JavaScript file.
 
 `docker compose run --rm npm run dev`
+
+Go to your localhost to see the project and click generate joke to see how the site functions
