@@ -30,7 +30,9 @@ Vue.use(VueHighlightJs, {
 import JokesComponent from "./components/JokesComponent.vue";
 
 const routes = [
-{ name: "JokesComponent", path: '/jokes', component: JokesComponent},
+    { name: "JokesComponent", path: '/jokes', component: JokesComponent},
+    { name: "JokesComponent", path: '/', component: JokesComponent},
+
 ];
 
 const router = new VueRouter({ mode: 'history', routes });

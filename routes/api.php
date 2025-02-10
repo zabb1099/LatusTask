@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,12 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::post('register',[App\Http\Controllers\UserAuthController::class,'register']);
+Route::post('login',[App\Http\Controllers\UserAuthController::class,'login']);
+Route::post('logout',[App\Http\Controllers\UserAuthController::class,'logout'])
+  ->middleware('auth:sanctum');
 
 //Api Route to get Joke HTTP request
 Route::get('/jokes', [App\Http\Controllers\JokeController::class, 'getJokes']);
